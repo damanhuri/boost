@@ -1,22 +1,23 @@
 
 # Boost Test - Voucher Codes Pool
 
-## Voucher Pool Project
-
 ### How To Run
 
-This application is packaged as a war which has Tomcat embedded. No Tomcat or JBoss installation is necessary. You run it using the java -jar command.
+This application is packaged as a war which has Tomcat embedded. No Tomcat or JBoss installation is necessary. 
+You run it using the java -jar command. Example :
+> java -jar target/voucherpool-0.0.1-SNAPSHOT.jar
 
 #### Clone this repository
 Make sure you are using JDK 1.8 and Maven 3.x
-You can build the project and run the tests by running mvn clean package
+You can build the project and run the tests by running :
+> mvn clean package
 
 Once successfully built, you can run the service :
-        mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
+> mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
 #### Database
 - Install MySQL Database
-- dump sql file in db folder
+- dump **voucherpool.sql** file in db folder
 - configure db access details in src/main/resources/application.properties
 
 Once the application runs you should see something like this
@@ -40,6 +41,9 @@ there can be many recipients in a voucher pool, we need a call that auto-generat
 > http://localhost:8080/api/specialoffers
 
 > http://localhost:8080/api/vouchercodes
+
+For testing, you can also use Postman.
+Import file **BOOST.postman_collection.json** in the Postman app.
 
 #### 1. Create a Receipient
 POST /api/receipients
