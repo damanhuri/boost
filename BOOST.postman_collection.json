@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "3115a8c4-7070-4c83-93c0-fa854d4e9033",
+		"name": "BOOST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all receipients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/receipients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"receipients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new receipient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Abu\", \"email\": \"abu@gmail.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/receipients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"receipients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Special Offer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"CNY Offer\",\r\n    \"discount\": \"12.5\",\r\n    \"expirationDate\": \"2022-02-28 00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/specialoffers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"specialoffers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Use Voucher Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"1df64495bf404605b231d6016db154eb\",\r\n    \"email\": \"ali@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/vouchercodes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vouchercodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all voucher codes by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vouchercodes/email/ali@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vouchercodes",
+						"email",
+						"ali@gmail.com"
+					],
+					"query": [
+						{
+							"key": "emailAddr",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
